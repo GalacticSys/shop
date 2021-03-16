@@ -1,0 +1,32 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.hjt.sms.config.SmsConfig",
+      "name": "shop.sms",
+      "type": "com.hjt.sms.config.SmsConfig"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.hjt.sms.config.SmsConfig",
+      "name": "shop.sms.access-key-id",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.hjt.sms.config.SmsConfig",
+      "name": "shop.sms.access-key-secret",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.hjt.sms.config.SmsConfig",
+      "name": "shop.sms.sign-name",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.hjt.sms.config.SmsConfig",
+      "name": "shop.sms.verify-code-template",
+      "type": "java.lang.String"
+    }
+  ]
+}

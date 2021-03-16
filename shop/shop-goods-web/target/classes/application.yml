@@ -1,0 +1,31 @@
+server:
+  port: 8085
+spring:
+  application:
+    name: goods-web
+  thymeleaf:
+    cache: false
+  rabbitmq:
+    host: 192.168.1.8
+    port: 5672
+    virtual-host: /shop
+    username: shop
+    password: shop
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka
+  instance:
+    lease-renewal-interval-in-seconds: 5 #设置心跳时间 续约更新时间间隔
+    lease-expiration-duration-in-seconds: 15 #心跳过期时间 续约到期时间
+#配置fastdfs
+fdfs:
+  so-timeout: 1501 # 超时时间
+  connect-timeout: 601 # 连接超时时间
+  thumb-image: # 缩略图
+    width: 60
+    height: 60
+  tracker-list: # tracker地址：你的虚拟机服务器地址+端口（默认是22122）
+    - 192.168.1.8:22122

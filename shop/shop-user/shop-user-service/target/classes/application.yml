@@ -1,0 +1,31 @@
+server:
+  port: 8086
+spring:
+  application:
+    name: user-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/leyou?useSSL=false&useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  redis:
+    host: 192.168.1.8
+  rabbitmq:
+    host: 192.168.1.8
+    port: 5672
+    virtual-host: /shop
+    username: shop
+    password: shop
+    template:
+      receive-timeout: 300000
+      reply-timeout: 300000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8080/eureka
+  instance:
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 15
+
+mybatis:
+  type-aliases-package: com.hjt.user.pojo

@@ -1,0 +1,31 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: search-service
+  data:
+    elasticsearch:
+      cluster-name: elasticsearch
+      cluster-nodes: 192.168.1.8:9300
+  jackson:
+    default-property-inclusion: non_null
+  rabbitmq:
+    host: 192.168.1.8
+    port: 5672
+    virtual-host: /shop
+    username: shop
+    password: shop
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka
+  instance:
+    lease-renewal-interval-in-seconds: 5 #设置心跳时间 续约更新时间间隔
+    lease-expiration-duration-in-seconds: 15 #心跳过期时间 续约到期时间
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 10000
+        readTimeout: 600000

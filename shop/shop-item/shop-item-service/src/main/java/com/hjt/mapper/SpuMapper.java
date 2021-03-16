@@ -1,0 +1,13 @@
+package com.hjt.mapper;
+
+import com.hjt.item.pojo.SpecParam;
+import com.hjt.item.pojo.Spu;
+import tk.mybatis.mapper.common.Mapper;
+
+/**
+ * @author 胡江涛
+ * @version 1.0
+ * @date 2021/1/30 23:34
+ */
+public interface SpuMapper  extends Mapper<Spu> {
+}
